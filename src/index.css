@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #F6F5F0;
+    color: #252720;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background-color: #F6F5F0;
+    color: #252720;
+    min-height: 100vh;
+  }
+
+  /* Editorial Typography headings default to serif */
+  h1, h2, h3, .font-editorial {
+    font-family: 'Lora', Charter, Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+
+  /* Numerical displays and timer default to tabular numbers */
+  .tabular-nums, .timer-num {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #D5D4CB #EFEEE7;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #EFEEE7;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #D5D4CB;
+    border-radius: 9999px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #B4B3AA;
+  }
+}
